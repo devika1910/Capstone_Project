@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div style="color: black;" id="login-form">
+        <h1>Please log in to access the product review page.</h1>
+        <form action='/login' method='post'>
+            <label for='username'>
+                <span class='required'>Username: </span>
+                <input type='text' id='username' name='username' required='required' tabindex='1' autofocus='autofocus' />
+            </label>
+            <br><br>
+            <label for='password'>
+                <span class='required'>Password: </span>
+                <input type='password' id='password' name='password' required='required' tabindex='2' />
+            </label>
+            <br><br>
+            <button type='submit' id='loginButton'>Login</button>
+        </form>
+
+        <a href='/signup'>Signup</a>
+    </div>
+</body>
+</html>

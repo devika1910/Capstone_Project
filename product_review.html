@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="'container">
+    <div style="color: black;" id="product-review-form">
+
+           <h1>Welcome To</h1>
+            <div>
+                <h1>ONLINE PRODUCT REVIEWS</h1>
+                <h4><marquee speed="80">Reviews</marquee></h4>
+            </div>
+
+
+        <form action='./predict' method="post">
+
+      <div style="color: black;" >
+
+          <label for="name">
+            <span class="required">product_name: </span>
+            <input type="text" id="name" name="product_name" value="" placeholder="product name.." required="required" tabindex="3" autofocus="autofocus" />
+          </label>
+      </div>
+
+
+       <div >
+          <button name="submit" type="submit" id="submit" >SUBMIT</button>
+      </div>
+
+
+      <div style="color: red;">
+          <button name="reset" type="reset" id="reset" >RESET</button>
+      </div>
+        <div>
+       <h3 style="color: red;">reviews : {{prog}}</h3>
+            <h3 style="color: black;">Summary:</h3>
+             <span>
+                   {% for line in summary_lines %}
+                   {{ line }} <!-- Each review will be concatenated in a single line -->
+                    {% endfor %}
+             </span>
+       </div>
+
+       </form>
+        <a href='/logout'>Logout</a>
+    </div>
+    </div>
+</body>
+</html>
